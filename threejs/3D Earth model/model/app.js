@@ -1,4 +1,4 @@
-let scene, camera, renderer, earth;
+let scene, camera, renderer, earth, mouse, center;
 
 function init() {
     scene = new THREE.Scene();
@@ -36,10 +36,26 @@ function onWindowResize() {
 
 window.addEventListener("resize", onWindowResize, false);
 
+mouse = new THREE.Vector3(0, 0, 1);
+
+function onDocumentMouseMove(event) {
+    mouse.x = (event.clientX - window.innerWidth / 2) * 8;
+    mouse.y = (event.clientY - window.innerHeight / 2) * 8;
+}
+
+document.addEventListener("mousemove", onDocumentMouseMove, false);
+
 function animate() {
     renderer.render(scene, camera);
     earth.rotation.z += 0.004;
     requestAnimationFrame(animate);
+    render();
+}
+
+function render() {
+    camera.position.x += (mouse.x - camera.position.x) * 0.00002;
+    camera.position.y += (-mouse.y - camera.position.y) * 0.00002;
+    renderer.render(scene, camera);
 }
 
 init();
