@@ -49,12 +49,12 @@ function animate() {
     renderer.render(scene, camera);
     earth.rotation.z += 0.004;
     requestAnimationFrame(animate);
-    render();
+   // render();
 }
 
 function render() {
-    camera.position.x += (mouse.x - camera.position.x) * 0.00002;
-    camera.position.y += (-mouse.y - camera.position.y) * 0.00002;
+    camera.position.x += (-mouse.x - camera.position.x) * 0.00002;
+    camera.position.y += (mouse.y - camera.position.y) * 0.00002;
     renderer.render(scene, camera);
 }
 
