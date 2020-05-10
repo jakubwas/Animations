@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: "Montserrat", sans-serif;
+    background: #000;
+}
+
+p {
+    position: relative;
+    text-align: center;
+    font-size: 70px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    line-height: 0.8;
+    background: rgb(207, 30, 173);
+    background: linear-gradient(
+        333deg,
+        rgba(207, 30, 173, 1) 0%,
+        rgba(24, 34, 215, 1) 100%
+    );
+    background-size: 150% 100%;
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 1s linear infinite alternate;
+}
+
+@keyframes shine {
+    0% {
+        background-position-x: 10%;
+    }
+
+    100% {
+        background-position-x: 100%;
+    }
+}
