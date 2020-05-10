@@ -1,5 +1,23 @@
-let scene, camera, renderer, earth, mouse, center;
+/* Declare elements */
+let scene, camera, renderer;
+let earth, mouse, center, tm;
 
+/* Event Listeners */
+document.addEventListener("mousemove", onDocumentMouseMove, false);
+window.addEventListener("resize", onWindowResize, false);
+
+/* Event Listeners Functions */
+function onDocumentMouseMove(event) {
+    mouse.x = (event.clientX - window.innerWidth / 2) * 8;
+    mouse.y = (event.clientY - window.innerHeight / 2) * 8;
+}
+function onWindowResize() {
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+}
+
+/* Three.js Functions */
 function init() {
     scene = new THREE.Scene();
     camera = new THREE.PerspectiveCamera(
@@ -9,7 +27,6 @@ function init() {
         3000
     );
 
-    camera.rotation.y = (45 / 180) * Math.PI;
     camera.position.z = 250;
 
     renderer = new THREE.WebGLRenderer({ antialias: true });
@@ -17,7 +34,12 @@ function init() {
     document.body.appendChild(renderer.domElement);
 
     controls = new THREE.OrbitControls(camera, renderer.domElement);
+    controls.zoomSpeed = 0.5;
+    controls.minDistance = 100;
+    controls.maxDistance = 300;
     controls.addEventListener("update", renderer);
+
+    mouse = new THREE.Vector3(0, 0, 1);
 
     let loader = new THREE.GLTFLoader();
     loader.load("./assets/scene.gltf", function (gltf) {
@@ -28,28 +50,11 @@ function init() {
     });
 }
 
-function onWindowResize() {
-    camera.aspect = window.innerWidth / window.innerHeight;
-    camera.updateProjectionMatrix();
-    renderer.setSize(window.innerWidth, window.innerHeight);
-}
-
-window.addEventListener("resize", onWindowResize, false);
-
-mouse = new THREE.Vector3(0, 0, 1);
-
-function onDocumentMouseMove(event) {
-    mouse.x = (event.clientX - window.innerWidth / 2) * 8;
-    mouse.y = (event.clientY - window.innerHeight / 2) * 8;
-}
-
-document.addEventListener("mousemove", onDocumentMouseMove, false);
-
 function animate() {
     renderer.render(scene, camera);
     earth.rotation.z += 0.004;
     requestAnimationFrame(animate);
-   // render();
+    // render();
 }
 
 function render() {
