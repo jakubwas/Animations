@@ -1,41 +1,74 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
+
 h1 {
-    font-size: 44px;
-    text-align: center;
-    margin-top: 20px;
+  font-size: 44px;
+  text-align: center;
+  margin-top: 20px;
 }
+
 .container {
-    display: flex;
-    height: 200vh;
-    flex-direction: column;
-    width: 40%;
-    margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 200vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 40%;
+  margin: auto;
 }
 
 .row-1 {
-    margin-top: 400px;
-    display: flex;
-    justify-content: space-around;
+  margin-top: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
+
 .row-2,
 .row-3 {
-    margin-top: 150px;
-    display: flex;
-    justify-content: space-between;
+  margin-top: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
+
 .row-4 {
-    margin-top: 100px;
-    display: flex;
-    justify-content: space-around;
+  margin-top: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
+
 .path-row-1,
 .path-row-2,
 .path-row-3,
 .path-row-4 {
-    stroke-dasharray: 2222;
-    stroke-dashoffset: 2222;
+  stroke-dasharray: 2222;
+  stroke-dashoffset: 2222;
 }
+
+.path {
+  fill: rgba(152, 152, 152, 0.72) !important;
+}
+
+@media screen and (max-width: 1000px) {
+  svg {
+    width: 70px;
+    height: 70px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
