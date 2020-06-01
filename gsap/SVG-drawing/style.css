@@ -3,20 +3,20 @@
     padding: 0;
     box-sizing: border-box;
 }
-body {
+h1 {
+    font-size: 44px;
+    text-align: center;
+    margin-top: 20px;
+}
+.container {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    justify-content: space-around;
+    height: 200vh;
 }
 .path {
-    stroke-dasharray: 3763;
-    stroke-dashoffset: 3763;
-    animation: dash 5s 2s linear forwards;
+    stroke-dasharray: 2222;
+    stroke-dashoffset: 2222;
 }
-
-@keyframes dash {
-    to {
-        stroke-dashoffset: 0;
-    }
+.svg {
+    margin-top: 500px;
 }
