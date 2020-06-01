@@ -10,13 +10,32 @@ h1 {
 }
 .container {
     display: flex;
-    justify-content: space-around;
     height: 200vh;
+    flex-direction: column;
+    width: 40%;
+    margin: auto;
 }
-.path {
+
+.row-1 {
+    margin-top: 400px;
+    display: flex;
+    justify-content: space-around;
+}
+.row-2,
+.row-3 {
+    margin-top: 150px;
+    display: flex;
+    justify-content: space-between;
+}
+.row-4 {
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-around;
+}
+.path-row-1,
+.path-row-2,
+.path-row-3,
+.path-row-4 {
     stroke-dasharray: 2222;
     stroke-dashoffset: 2222;
-}
-.svg {
-    margin-top: 500px;
 }
