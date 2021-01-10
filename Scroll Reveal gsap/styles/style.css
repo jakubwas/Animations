@@ -13,7 +13,16 @@ body {
 .space {
     width: 100%;
     height: 100vh;
-    background: #303a52;
+    background: rgb(48, 58, 82);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.scroll-down {
+    font-size: 40px;
+    color: rgb(255, 255, 255);
+    letter-spacing: 5px;
 }
 
 .container {
@@ -24,29 +33,34 @@ body {
     align-items: center;
 }
 
-h1,
-h2,
-p {
+.dev-name,
+.dev-occ,
+.dev-text {
     margin-left: 2rem;
     color: white;
 }
-h1,
-h2 {
+
+.dev-name,
+.dev-occ {
     font-family: "Abril Fatface", cursive;
+
 }
 
-h1 {
+.dev-name { 
     font-size: 6rem;
 }
-h2 {
+
+.dev-occ {
     font-size: 4rem;
 }
-p {
+
+.dev-text {
     margin-top: 2rem;
     font-size: 1.5rem;
 }
-span {
-    color: #482ff7;
+
+.dev-occ--color {
+    color: rgb(72, 47, 247);
 }
 
 .img-container,
