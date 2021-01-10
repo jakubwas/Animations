@@ -28,6 +28,7 @@ p {
     );
     background-size: 150% 100%;
     background-repeat: no-repeat;
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: shine 1s linear infinite alternate;
