@@ -5,10 +5,16 @@
           box-sizing: border-box;
 }
 
+body {
+  background: #100a1c;
+}
+
 h1 {
   font-size: 44px;
   text-align: center;
   margin-top: 20px;
+  color: white;
+  letter-spacing: 7px;
 }
 
 .container {
@@ -39,9 +45,8 @@ h1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .row-4 {

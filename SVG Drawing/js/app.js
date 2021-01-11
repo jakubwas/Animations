@@ -2,7 +2,6 @@ let sceneHasBeenDestroyed = false;
 let controller1;
 let controller2;
 let controller3;
-let controller4;
 const paths = document.querySelectorAll("path");
 
 function animation() {
@@ -16,8 +15,7 @@ function animation() {
                 duration: 2,
                 ease: "power1.inOut",
                 immediateRender: false,
-                strokeDashoffset: 0,
-                fill: "rgba(152,152,152,0.72)",
+                strokeDashoffset: 0
             })
         )
         .addIndicators() // add indicators (requires plugin)
@@ -33,8 +31,7 @@ function animation() {
                 duration: 2,
                 ease: "power1.inOut",
                 immediateRender: false,
-                strokeDashoffset: 0,
-                fill: "rgba(152,152,152,0.72)",
+                strokeDashoffset: 0
             })
         )
         .addIndicators() // add indicators (requires plugin)
@@ -50,44 +47,21 @@ function animation() {
                 duration: 2,
                 ease: "power1.inOut",
                 immediateRender: false,
-                strokeDashoffset: 0,
-                fill: "rgba(152,152,152,0.72)",
+                strokeDashoffset: 0
             })
         )
         .addIndicators() // add indicators (requires plugin)
         .addTo(controller3);
-
-    controller4 = new ScrollMagic.Controller();
-    let scene4 = new ScrollMagic.Scene({
-        triggerElement: ".row-4",
-    });
-    scene4
-        .setTween(
-            gsap.to(".path-row-4", {
-                duration: 2,
-                ease: "power1.inOut",
-                immediateRender: false,
-                strokeDashoffset: 0,
-                fill: "rgba(152,152,152,0.72)",
-            })
-        )
-        .addIndicators() // add indicators (requires plugin)
-        .addTo(controller4);
 }
 
-//
-//
-//
 window.addEventListener("resize", onWindowResize);
-//
+
 function onWindowResize(e) {
     if (window.innerWidth < 1000 && !sceneHasBeenDestroyed) {
         controller1.destroy(true);
         controller2.destroy(true);
         controller3.destroy(true);
-        controller4.destroy(true);
         sceneHasBeenDestroyed = true;
-        console.log("1");
         paths.forEach((path) => {
             path.classList.add("path");
         });
@@ -97,12 +71,9 @@ function onWindowResize(e) {
         });
         animation();
         sceneHasBeenDestroyed = false;
-        console.log("2");
     }
 }
-//
-//
-//
+
 if (window.innerWidth >= 1000) {
     animation();
 } else {

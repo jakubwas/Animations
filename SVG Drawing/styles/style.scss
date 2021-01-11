@@ -3,11 +3,19 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body {
+    background:rgb(16, 10, 28);
+}
+
 h1 {
     font-size: 44px;
     text-align: center;
     margin-top: 20px;
+    color: rgb(255, 255, 255);
+    letter-spacing: 7px;
 }
+
 .container {
     display: flex;
     height: 200vh;
@@ -15,22 +23,26 @@ h1 {
     width: 40%;
     margin: auto;
 }
+
 .row-1 {
     margin-top: 400px;
     display: flex;
     justify-content: space-around;
 }
+
 .row-2,
 .row-3 {
     margin-top: 150px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
+
 .row-4 {
     margin-top: 100px;
     display: flex;
     justify-content: space-around;
 }
+
 .path-row-1,
 .path-row-2,
 .path-row-3,
@@ -38,13 +50,14 @@ h1 {
     stroke-dasharray: 2222;
     stroke-dashoffset: 2222;
 }
+
 .path {
     fill: rgba(152, 152, 152, 0.72) !important;
 }
 
 @media screen and (max-width: 1000px){
-svg {
-    width: 70px;
-    height: 70px;
-}
+    svg {
+        width: 70px;
+        height: 70px;
+    }
 }
