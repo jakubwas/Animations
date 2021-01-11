@@ -1,6 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300);
 body {
-  background:#100a1c;
+  background:rgb(16, 10, 28);
 }
 
 .container {
@@ -14,7 +14,7 @@ body {
 
 h1,
 p, h3 {
-  color: #f1e1fd;
+  color: rgb(241, 225, 253);
   font-family: "Open Sans", Helvetica;
   margin: 10px 0px;
 }
