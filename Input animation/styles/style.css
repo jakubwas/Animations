@@ -23,7 +23,7 @@
 .form input {
   width: 100%;
   height: 100%;
-  color: #595f6e;
+  color: rgb(89, 95, 110);
   padding-top: 20px;
   border: none;
   outline: none;
@@ -36,7 +36,7 @@
   width: 100%;
   height: 100%;
   pointer-events: none;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid rgb(0, 0, 0);
 }
 .form label::after {
   content: "";
@@ -45,7 +45,7 @@
   bottom: -1px;
   height: 100%;
   width: 100%;
-  border-bottom: 3px solid #5fa8d3;
+  border-bottom: 3px solid rgb(95, 168, 211);
   transform: translateX(-100%);
   transition: transform 0.3s ease;
 }
@@ -59,7 +59,7 @@
 .form input:focus + .label-name .content-name,
 .form input:valid + .label-name .content-name {
   transform: translateY(-150%);
-  color: #5fa8d3;
+  color: rgb(95, 168, 211);
   font-size: 14px;
 }
 

@@ -22,9 +22,9 @@ body {
 .box {
     width: 80px;
     height: 80px;
-    border: 2px solid white;
+    border: 2px solid rgb(255, 255, 255);
     border-radius: 1rem;
-    color: white;
+    color: rgb(255, 255, 255);
     font-size: 2rem;
     display: flex;
     align-items: center;
@@ -33,20 +33,20 @@ body {
 }
 
 .box1 {
-    background: #071e3d;
+    background: rgb(7, 30, 61);
 }
 .box2 {
     background: rgb(187, 187, 21);
 }
 .box3 {
-    background: #21e6c1;
+    background: rgb(33, 230, 193);
 }
 .box4 {
-    background: #1f4287;
+    background: rgb(31, 66, 135);
 }
 .box5 {
-    background: #278ea5;
+    background: rgb(39, 142, 165);
 }
 .box6 {
-    background: #17b978;
+    background: rgb(23, 185, 120);
 }
